@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingsController {
 
     @GetMapping
-    public ResponseEntity getOrcFormData() {
+    public ResponseEntity greetings() {
 
         return new ResponseEntity<>("Hello world", HttpStatus.OK);
+    }
+
+    @GetMapping("/deep")
+    public ResponseEntity deeper() {
+
+        return new ResponseEntity<>("this is one step deeper", HttpStatus.OK);
     }
 
 }
