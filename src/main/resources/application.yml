@@ -17,7 +17,7 @@ spring:
 
 logging:
   level:
-    com.progmasters: debug
+    hu.formulative.demo: debug
     org.springframework.web: info
     org.hibernate: info
   pattern:
