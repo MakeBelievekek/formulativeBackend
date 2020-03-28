@@ -11,12 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class GreetingsController {
 
-    @GetMapping("/deep")
-    public ResponseEntity greetings() {
-
-        return new ResponseEntity<>("Hello world", HttpStatus.OK);
-    }
-
     @GetMapping
     public ResponseEntity deeper() {
 
