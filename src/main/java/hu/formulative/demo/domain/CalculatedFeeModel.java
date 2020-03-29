@@ -3,7 +3,7 @@ package hu.formulative.demo.domain;
 import lombok.ToString;
 
 @ToString
-public class Result {
+public class CalculatedFeeModel {
     private Integer yearlyFee;
 
     public Integer getYearlyFee() {

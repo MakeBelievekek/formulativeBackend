@@ -1,6 +1,9 @@
 package hu.formulative.demo.domain;
 
-public class PayLoad {
+import lombok.ToString;
+
+@ToString
+public class FeeCalculationParameterModel {
     private String day;
     private String amountOfInsurance;
     private String year;
@@ -13,7 +16,7 @@ public class PayLoad {
     private String customerDiscount;
     private String campaignDiscount;
 
-    public PayLoad() {
+    public FeeCalculationParameterModel() {
         this.day = "30";
         this.amountOfInsurance = "5000000";
         this.year = "1981";
@@ -27,17 +30,17 @@ public class PayLoad {
         this.campaignDiscount = "1";
     }
 
-    public PayLoad(String day,
-                   String amountOfInsurance,
-                   String year,
-                   String month,
-                   String lengthOfInsurance,
-                   String numberOfInsured,
-                   String chargeFrequency,
-                   String policyDiscount,
-                   String paymentMethodDiscount,
-                   String customerDiscount,
-                   String campaignDiscount) {
+    public FeeCalculationParameterModel(String day,
+                                        String amountOfInsurance,
+                                        String year,
+                                        String month,
+                                        String lengthOfInsurance,
+                                        String numberOfInsured,
+                                        String chargeFrequency,
+                                        String policyDiscount,
+                                        String paymentMethodDiscount,
+                                        String customerDiscount,
+                                        String campaignDiscount) {
         this.day = day;
         this.amountOfInsurance = amountOfInsurance;
         this.year = year;
@@ -139,20 +142,4 @@ public class PayLoad {
         this.campaignDiscount = campaignDiscount;
     }
 
-    @Override
-    public String toString() {
-        return "PayLoad{" +
-                "day='" + day + '\'' +
-                ", amountOfInsurance='" + amountOfInsurance + '\'' +
-                ", year='" + year + '\'' +
-                ", month='" + month + '\'' +
-                ", lengthOfInsurance='" + lengthOfInsurance + '\'' +
-                ", numberOfInsured='" + numberOfInsured + '\'' +
-                ", chargeFrequency='" + chargeFrequency + '\'' +
-                ", policyDiscount='" + policyDiscount + '\'' +
-                ", paymentMethodDiscount='" + paymentMethodDiscount + '\'' +
-                ", customerDiscount='" + customerDiscount + '\'' +
-                ", campaignDiscount='" + campaignDiscount + '\'' +
-                '}';
-    }
 }

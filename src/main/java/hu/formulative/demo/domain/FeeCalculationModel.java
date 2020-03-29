@@ -1,33 +1,33 @@
 package hu.formulative.demo.domain;
 
-import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-
-public class Dummy {
+@ToString
+public class FeeCalculationModel {
     private String project;
     private String buildConfig;
     private String version;
     private String calculation;
-    private PayLoad params;
+    private FeeCalculationParameterModel params;
 
-    public Dummy() {
+    public FeeCalculationModel() {
         this.project = "excelFelol";
         this.buildConfig = "default";
         this.version = "1.0.0";
         this.calculation = "yearlyFee.year";
-        this.params = new PayLoad();
+        this.params = new FeeCalculationParameterModel();
     }
 
-    public Dummy(String project,
-                 String buildConfig,
-                 String version,
-                 String calculation,
-                 PayLoad payLoad) {
+    public FeeCalculationModel(String project,
+                               String buildConfig,
+                               String version,
+                               String calculation,
+                               FeeCalculationParameterModel feeCalculationParameterModel) {
         this.project = project;
         this.buildConfig = buildConfig;
         this.version = version;
         this.calculation = calculation;
-        this.params = payLoad;
+        this.params = feeCalculationParameterModel;
     }
 
     public String getProject() {
@@ -62,22 +62,12 @@ public class Dummy {
         this.calculation = calculation;
     }
 
-    public PayLoad getParams() {
+    public FeeCalculationParameterModel getParams() {
         return params;
     }
 
-    public void setParams(PayLoad params) {
+    public void setParams(FeeCalculationParameterModel params) {
         this.params = params;
     }
 
-    @Override
-    public String toString() {
-        return "Dummy{" +
-                "project='" + project + '\'' +
-                ", buildConfig='" + buildConfig + '\'' +
-                ", version='" + version + '\'' +
-                ", calculation='" + calculation + '\'' +
-                ", params=" + params +
-                '}';
-    }
 }
