@@ -11,11 +11,14 @@ public class FeeCalculationModel {
     private FeeCalculationParameterModel params;
 
     public FeeCalculationModel() {
+    }
+
+    public FeeCalculationModel(FeeCalculationParameterModel parameterModel) {
         this.project = "excelFelol";
         this.buildConfig = "default";
         this.version = "1.0.0";
         this.calculation = "yearlyFee.year";
-        this.params = new FeeCalculationParameterModel();
+        this.params = parameterModel;
     }
 
     public FeeCalculationModel(String project,

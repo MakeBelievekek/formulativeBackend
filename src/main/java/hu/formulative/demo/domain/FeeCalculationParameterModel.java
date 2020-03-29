@@ -17,17 +17,6 @@ public class FeeCalculationParameterModel {
     private String campaignDiscount;
 
     public FeeCalculationParameterModel() {
-        this.day = "30";
-        this.amountOfInsurance = "5000000";
-        this.year = "1981";
-        this.month = "12";
-        this.lengthOfInsurance = "10";
-        this.numberOfInsured = "3";
-        this.chargeFrequency = "1";
-        this.policyDiscount = "0.1";
-        this.paymentMethodDiscount = "1";
-        this.customerDiscount = "1";
-        this.campaignDiscount = "1";
     }
 
     public FeeCalculationParameterModel(String day,

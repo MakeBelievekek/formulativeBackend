@@ -6,6 +6,7 @@ import lombok.ToString;
 public class CalculatedFeeModel {
     private Integer yearlyFee;
 
+
     public Integer getYearlyFee() {
         return yearlyFee;
     }
